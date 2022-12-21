@@ -11,21 +11,13 @@ let uiState = {
   }
   
   function handleFirstNameChange() {
-    firstNameText.textContent = firstNameInput.value;
-    helloText.textContent = (
-      'Hello ' +
-      firstNameInput.value + ' ' +
-      lastNameInput.value + '!'
-    );
+    uiState.firstName = firstNameInput.value;
+    updateUi();
   }
   
   function handleLastNameChange() {
-    lastNameText.textContent = lastNameInput.value;
-    helloText.textContent = (
-      'Hello ' +
-      firstNameInput.value + ' ' +
-      lastNameInput.value + '!'
-    );
+    uiState.lastName = lastNameInput.value;
+    updateUi();
   }
   
   function handleDocumentLoaded() {
